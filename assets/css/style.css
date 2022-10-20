@@ -316,6 +316,7 @@
      color: #fff;
      font-size: 11px;
      text-transform: capitalize;
+     transition: all .3s ease-in-out;
    }
    
    .nav-link:hover {
@@ -329,6 +330,7 @@
    /*=================================
      main styling starts here
    =================================*/
+   /* banner section start here */
    .banner {
      padding: 123px 0;
      position: relative;
@@ -381,12 +383,164 @@
    .banner-content {
      padding-top: 66px;
    }
+   /* banner section end here */
+   /* newsleter section start here */
+   .newscontent{
+    padding: 22px 0;
+    display: flex;
+    align-items: center;
+   }
+   h4{
+    font-size: 10px;
+    color: #000;
+   }
+   .news-anc{
+    color: #000;
+    font-size: 10px;
+    text-transform: capitalize;
+    font-weight: 600;
+    transition: all .3s ease-in-out;
+   }
+
+   .news-anc:hover{
+    color: #777;
+   }
+
+   .news-anc::before{
+    content: '\f054';
+    color: #1c1c1c;
+    font-family: "FontAwesome";
+    font-size: 8px;
+    padding: 0 8px;
+   }
+
+   h3{
+    padding-bottom: 16px;
+    color: #4F7EAF;
+    font-size: 25px;
+   }
+    h3::first-letter{
+      text-transform: capitalize;
+    }
+
+    .input-group,
+    .option{
+      display: flex;
+      flex-direction: column;
+      width: 32%;
+    }
+
+    label{
+      font-size: 10px;
+    }
+
+    label::first-letter{
+      text-transform: capitalize;
+    }
+
+  .input-group:nth-child(5) label,
+  .input-group:nth-child(7) label{
+    text-transform: capitalize;
+  }
+   .input{
+    width: 100%;
+    padding: 6PX 4%;
+    margin: 10px 0 18px;
+    box-sizing: border-box;
+    border: 1px solid #D4D3D3;
+    border-radius: 2px;
+    outline: none;
+    box-shadow:inset 0 0 5px  #D1D0D0
+   }
+
+   .option{
+    width: 100%;
+    margin: 10px 0 18px;
+    box-sizing: border-box;
+    outline: none;
+    position: relative;
+   }
+
+   .option::before{
+    content: "\f0d7";
+    font-family: "FontAwesome";
+    float: left;
+    position: absolute;
+    top: 2px;
+    right: 6px;
+    color: #fff;
+    font-size: 12px;
+   }
+   .option::after{
+    content: "\f0d7";
+    font-family: "FontAwesome";
+    float: left;
+    position: absolute;
+    top: 12px;
+    right: 6px;
+    color: #fff;
+    font-size: 12px;
+    transform: rotate(180deg);
+   }
+
+   .company-type,
+   .country{
+    width: 100%;
+    padding: 6px 4%;
+    border: none;
+    border-radius: 2px;
+    outline: none;
+    background-color: #369fe3;
+    color: #fff;
+    appearance: none;
+    cursor: pointer;
+   }
+
+   .para1,
+   .para2{
+    padding: 0 7% 15px 0;
+    font-size: 10px;
+    line-height: 20px
+   }
    
+   .checkbox label{
+    text-transform: capitalize;
+   }
+
+   .checkbox{
+    padding-bottom: 20px;
+   }
+
+   .para-anc{
+    font-size: 10px;
+    color: #4BB2E9;
+    transition: all .3s ease;
+   }
    
-   
-   
-   
-   
+   .para-anc:hover{
+    color: #777;
+   }
+
+   .input-control{
+    padding-bottom: 98px;
+   }
+
+   .submit-btn{
+    font-size: 10px;
+    padding: 7PX 7%;
+    background-color: #409FE3;
+    color: #fff;
+    border: 2px solid transparent;
+    transition: all .3s ease-in-out;
+   }
+
+   .submit-btn:hover{
+    color:#409FE3;
+    background-color: #fff;
+    border: 2px solid #409FE3;
+    border-radius: 4px;
+   }
+   /* newsletetr section end here */
    
    /*=================================
      main styling ends here
