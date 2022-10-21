@@ -163,7 +163,7 @@
    }
    
    /* 1.2. Clear Fix
-      ========================== */
+         ========================== */
    
    .cf:before,
    .cf:after {
@@ -203,8 +203,8 @@
    }
    
    /*=================================
-     Header styling starts here
-   =================================*/
+        Header styling starts here
+      =================================*/
    .header {
      position: absolute;
      z-index: 2;
@@ -244,7 +244,7 @@
    .logo-heading {
      position: relative;
      color: #DADEE1;
-     font-size: 37px;
+     font-size: 30px;
      flex-basis: auto;
    }
    
@@ -252,8 +252,8 @@
      content: "\f106";
      float: left;
      position: absolute;
-     top: -8px;
-     right: -15px;
+     top: -9px;
+     right: -16px;
      color: #3FACDB;
      font-family: "FontAwesome";
      font-size: 30px;
@@ -324,12 +324,12 @@
    }
    
    /*=================================
-     Header styling ends here
-   =================================*/
+        Header styling ends here
+      =================================*/
    
    /*=================================
-     main styling starts here
-   =================================*/
+        main styling starts here
+      =================================*/
    /* banner section start here */
    .banner {
      padding: 123px 0;
@@ -383,182 +383,384 @@
    .banner-content {
      padding-top: 66px;
    }
+   
    /* banner section end here */
    /* newsleter section start here */
-   .newscontent{
-    padding: 22px 0;
-    display: flex;
-    align-items: center;
+   .newscontent {
+     padding: 22px 0;
+     display: flex;
+     align-items: center;
    }
-   h4{
-    font-size: 10px;
-    color: #000;
+   
+   h4 {
+     color: #000;
+     font-size: 10px;
    }
-   .news-anc{
-    color: #000;
-    font-size: 10px;
-    text-transform: capitalize;
-    font-weight: 600;
-    transition: all .3s ease-in-out;
+   
+   .news-anc {
+     color: #000;
+     font-size: 10px;
+     font-weight: 600;
+     text-transform: capitalize;
+     transition: all .3s ease-in-out;
    }
-
-   .news-anc:hover{
-    color: #777;
+   
+   .news-anc:hover {
+     color: #777;
    }
-
-   .news-anc::before{
-    content: '\f054';
-    color: #1c1c1c;
-    font-family: "FontAwesome";
-    font-size: 8px;
-    padding: 0 8px;
+   
+   .news-anc::before {
+     content: '\f054';
+     padding: 0 8px;
+     color: #1c1c1c;
+     font-family: "FontAwesome";
+     font-size: 8px;
    }
-
-   h3{
-    padding-bottom: 16px;
-    color: #4F7EAF;
-    font-size: 25px;
+   
+   h3 {
+     padding-bottom: 16px;
+     color: #4F7EAF;
+     font-size: 25px;
    }
-    h3::first-letter{
-      text-transform: capitalize;
-    }
-
-    .input-group,
-    .option{
-      display: flex;
-      flex-direction: column;
-      width: 32%;
-    }
-
-    label{
-      font-size: 10px;
-    }
-
-    label::first-letter{
-      text-transform: capitalize;
-    }
-
-  .input-group:nth-child(5) label,
-  .input-group:nth-child(7) label{
-    text-transform: capitalize;
-  }
-   .input{
-    width: 100%;
-    padding: 6PX 4%;
-    margin: 10px 0 18px;
-    box-sizing: border-box;
-    border: 1px solid #D4D3D3;
-    border-radius: 2px;
-    outline: none;
-    box-shadow:inset 0 0 5px  #D1D0D0
+   
+   h3::first-letter {
+     text-transform: capitalize;
    }
-
-   .option{
-    width: 100%;
-    margin: 10px 0 18px;
-    box-sizing: border-box;
-    outline: none;
-    position: relative;
+   
+   .input-group,
+   .option {
+     width: 32%;
+     display: flex;
+     flex-direction: column;
    }
-
-   .option::before{
-    content: "\f0d7";
-    font-family: "FontAwesome";
-    float: left;
-    position: absolute;
-    top: 2px;
-    right: 6px;
-    color: #fff;
-    font-size: 12px;
+   
+   label {
+     font-size: 10px;
    }
-   .option::after{
-    content: "\f0d7";
-    font-family: "FontAwesome";
-    float: left;
-    position: absolute;
-    top: 12px;
-    right: 6px;
-    color: #fff;
-    font-size: 12px;
-    transform: rotate(180deg);
+   
+   label::first-letter {
+     text-transform: capitalize;
    }
-
+   
+   .input-group:nth-child(5) label,
+   .input-group:nth-child(7) label {
+     text-transform: capitalize;
+   }
+   
+   .input {
+     box-sizing: border-box;
+     width: 100%;
+     padding: 6PX 4%;
+     border: 1px solid #D4D3D3;
+     border-radius: 2px;
+     box-shadow: inset 0 0 5px #D1D0D0;
+     margin: 10px 0 18px;
+     outline: none;
+   }
+   
+   .option {
+     box-sizing: border-box;
+     width: 100%;
+     margin: 10px 0 18px;
+     position: relative;
+     outline: none;
+   }
+   
+   .option::before {
+     content: "\f0d7";
+     float: left;
+     position: absolute;
+     top: 2px;
+     right: 10px;
+     color: #fff;
+     font-family: "FontAwesome";
+     font-size: 12px;
+     transform: rotate(180deg);
+   }
+   
+   .option::after {
+     content: "\f0d7";
+     float: left;
+     position: absolute;
+     top: 12px;
+     right: 10px;
+     color: #fff;
+     font-family: "FontAwesome";
+     font-size: 12px;
+   }
+   
    .company-type,
-   .country{
-    width: 100%;
-    padding: 6px 4%;
-    border: none;
-    border-radius: 2px;
-    outline: none;
-    background-color: #369fe3;
-    color: #fff;
-    appearance: none;
-    cursor: pointer;
+   .country {
+     width: 100%;
+     padding: 6px 4%;
+     border: none;
+     border-radius: 2px;
+     outline: none;
+     background-color: #369fe3;
+     color: #fff;
+     appearance: none;
+     cursor: pointer;
    }
-
+   
    .para1,
-   .para2{
-    padding: 0 7% 15px 0;
-    font-size: 10px;
-    line-height: 20px
+   .para2 {
+     padding: 0 7% 15px 0;
+     font-size: 10px;
+     line-height: 16px
    }
    
-   .checkbox label{
-    text-transform: capitalize;
-   }
-
-   .checkbox{
-    padding-bottom: 20px;
-   }
-
-   .para-anc{
-    font-size: 10px;
-    color: #4BB2E9;
-    transition: all .3s ease;
+   .checkbox label {
+     text-transform: capitalize;
    }
    
-   .para-anc:hover{
-    color: #777;
+   .checkbox {
+     padding-bottom: 20px;
    }
-
-   .input-control{
-    padding-bottom: 98px;
+   
+   .para-anc {
+     font-size: 10px;
+     color: #4BB2E9;
+     transition: all .3s ease;
    }
-
-   .submit-btn{
-    font-size: 10px;
-    padding: 7PX 7%;
-    background-color: #409FE3;
-    color: #fff;
-    border: 2px solid transparent;
-    transition: all .3s ease-in-out;
+   
+   .para-anc:hover {
+     color: #777;
    }
-
-   .submit-btn:hover{
-    color:#409FE3;
-    background-color: #fff;
-    border: 2px solid #409FE3;
-    border-radius: 4px;
+   
+   .input-control {
+     padding-bottom: 98px;
    }
+   
+   .submit-btn {
+     padding: 7px 7%;
+     border: 2px solid transparent;
+     background-color: #409FE3;
+     color: #fff;
+     font-size: 10px;
+     transition: all .3s ease-in-out;
+   }
+   
+   .submit-btn:hover {
+     color: #409FE3;
+     border: 2px solid #409FE3;
+     border-radius: 4px;
+     background-color: #fff;
+   }
+   
    /* newsletetr section end here */
+   /*=================================
+        main styling ends here
+      =================================*/
    
    /*=================================
-     main styling ends here
-   =================================*/
+        footer styling starts here
+      =================================*/
+   footer .wrapper {
+     width: 100%;
+   }
    
+   footer {
+     background: linear-gradient(to left, #1e3162, #215fa9);
+   }
+   
+   .footer-top {
+     width: 51%;
+     padding-top: 34px;
+     margin: 0 auto;
+     display: flex;
+     justify-content: space-between;
+   }
+   
+   .footer-logo {
+     flex-basis: 26%;
+   }
+   
+   .social-link {
+     flex-basis: 32%;
+   }
+   
+   .footer-nav {
+     flex-basis: 26%;
+   }
+   
+   .top-heading {
+     padding-top: 5px;
+     border-bottom: 2px solid #00629c;
+     position: relative;
+     color: #D4D3D3;
+     font-size: 24px;
+   }
+   
+   .top-heading::before {
+     content: "\f106";
+     float: left;
+     position: absolute;
+     top: -3px;
+     right: 20px;
+     color: #3FACDB;
+     font-family: "FontAwesome";
+     font-size: 25px;
+     transform: rotate(-316deg);
+   }
+   
+   .footer-logo P {
+     padding-top: 5px;
+     color: #D4D3D3;
+     font-size: 10PX;
+   }
+   
+   
+   .footer-logo P span {
+     font-size: 12px;
+     font-weight: 600;
+     text-transform: capitalize;
+   }
+   
+   .footer-headig,
+   .socia-heading {
+     color: #D4D3D3;
+     font-size: 15px;
+   }
+   
+   .socia-heading {
+     padding-bottom: 10px;
+   }
+   
+   .footer-link,
+   .copy {
+     color: #D4D3D3;
+     font-size: 10px;
+   }
+   
+   .footerlist {
+     padding-top: 15px;
+     display: flex;
+     flex-direction: column;
+     align-content: center;
+     justify-content: center;
+     text-transform: capitalize;
+   }
+   
+   .social-item {
+     padding: 0 8px 0 0;
+   }
+   
+   .icon {
+     width: 28px;
+     height: 28px;
+     border-radius: 50%;
+     position: relative;
+     background-color: #fff;
+     text-indent: -9999px;
+   }
+   
+   .social-item .icon::before {
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     font-family: "FontAwesome";
+     transform: translate(-50%, -50%);
+     text-indent: 0;
+     transition: all .3s ease-in-out;
+   
+   }
+   
+   .social-item .icon:hover {
+     color: #777;
+     transform: scale(.9);
+   }
+   
+   .linkedin::before {
+     content: "\f0e1";
+     color: #3178B5;
+   }
+   
+   .twitter::before {
+     content: "\f099";
+     color: #44A1F2;
+   }
+   
+   .youtube::before {
+     content: "\f04b";
+     color: #F62100;
+   }
+   
+   .facebook::before {
+     content: "\f09a";
+     color: #5B7FC8;
+   }
+   
+   .footer-bottom {
+     padding: 7px 0;
+     background-color: #00477b;
+   }
+   
+   .bottom-con {
+     width: 51%;
+     margin: 0 auto;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+   
+   }
+   
+   .bottom-item {
+     padding: 0 1%;
+     border-right: 1px solid #D4D3D3;
+   }
+   
+   .bottom-nav {
+     display: flex;
+     flex-basis: 54%;
+     justify-content: center;
+     align-items: center;
+   }
+   
+   .bottom-item:nth-child(4) {
+     border: none;
+   }
+   
+   .bottom-links {
+     color: #D4D3D3;
+     font-size: 8px;
+     text-transform: capitalize;
+   }
+   
+   .scrollTop-btn {
+     position: fixed;
+     bottom: 0;
+     right: 0;
+   }
+   
+   .ScrollTop {
+     width: 40px;
+     height: 40px;
+     border: 1px solid #FFF;
+     border-radius: 50%;
+     position: relative;
+     background-color: #000;
+     text-indent: -9999px;
+     transition: all .3s ease;
+   }
+   
+   .ScrollTop:hover {
+     transform: scale(.9);
+   }
+   
+   .ScrollTop::before {
+     content: "\f077";
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     color: #fff;
+     font-size: 20px;
+     font-family: "FontAwesome";
+     transform: translate(-50%, -50%);
+     text-indent: 0;
+   }
    /*=================================
-     footer styling starts here
-   =================================*/
-   
-   
-   
-   
-   
-   
-   
-   /*=================================
-     footer styling ends here
-   =================================*/
+        footer styling ends here
+      =================================*/
    
    /*media query starts*/
    /*media query for 995px starts here*/
