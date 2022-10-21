@@ -21,7 +21,7 @@ hamburger.addEventListener("click", function () {
 // })
 function validation(input, errorMsg, regax) {
     let spanError;
-    if (input.value == "" && !regax.test(input.value)) {
+    if (input.value == "" || !regax.test(input.value)) {
         const err = document.querySelector('.input-span')
         if (!err) {
 
@@ -30,12 +30,7 @@ function validation(input, errorMsg, regax) {
             inputGroup.appendChild(spanError);
             spanError.classList.add("input-span")
         }
-        console.warn(inputGroup)
 
-    }
-    
-    if (regax.test(input.value)) {
-        spanError.classList.remove("input-span")
     } else {
         spanError.innerText='someting bad input'
     }
