@@ -787,8 +787,13 @@ footer { background: linear-gradient(to left, #1e3162, #215fa9); }
     transition: all .3s;
   }
 
+<<<<<<< HEAD
   .list-item{ border: none;}
 
+=======
+  .list-item{ border: none ;}
+  
+>>>>>>> aa-feature-css
   .hamburger.active .bar2 { opacity: 0; }
 
   .hamburger.active .bar1 { transform: translateY(8px) rotate(45deg); }
