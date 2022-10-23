@@ -10,7 +10,9 @@ const form = document.querySelector(".form")
     email = document.querySelector(".email"),
     choose = document.querySelector(".company-type"),
     country = document.querySelector(".country"),
-    scrollTop = document.querySelector(".scrollTop-btn");
+    scrollTop = document.querySelector(".scrollTop-btn"),
+    yes = document.querySelector(".yes"),
+    no = document.querySelector(".no"),
     nameRegex = /^([a-zA-Z])/,
     emailRegex = /^[A-Za-z0-9._]{3,}@[A-Za-z]{3,}[.]{1}[A-Za-z.]{2,6}$/;
 // global variable declaration start here
@@ -24,7 +26,7 @@ hamburger.addEventListener("click", function () {
 // form submit event start here
 form.addEventListener("submit", function (e) {
     e.preventDefault();
-    error = document.querySelectorAll("succes");
+    error = document.querySelectorAll(".fail");
     if ((firstName.value) && (lastName.value) && (position.value) && (company.value) && (choose.value) && (country.value) && (email.value) && (yes.checked || no.checked) && (error.length === 0)) {
         alert("Your form has been submitted successfully..!");
         firstName.value = "";
@@ -84,8 +86,6 @@ function pick(optionInput) {
 };
 function checkBox() {
     spanError = document.querySelector(".yes-input");
-    yes = document.querySelector(".yes"),
-        no = document.querySelector(".no");
     if ((yes.checked != true) && (no.checked != true)) {
         spanError.classList.add("fail");
         spanError.innerText = "*please select our T&C "
