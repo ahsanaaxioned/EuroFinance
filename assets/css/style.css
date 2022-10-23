@@ -431,7 +431,6 @@
      border: 1px solid #D4D3D3;
      border-radius: 2px;
      box-shadow: inset 0 0 5px #D1D0D0;
-     margin: 10px 0 18px;
      outline: none;
    }
    
@@ -439,7 +438,11 @@
    
    .input.input-error { border: 1px solid #F62100; }
    
-   .input-span{ display: block;}
+   .input-span{ 
+    color: #e51717;
+    font-size: 12px;
+    visibility: hidden;
+  }
    
    .option {
      box-sizing: border-box;
