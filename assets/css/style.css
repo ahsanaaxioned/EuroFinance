@@ -224,7 +224,6 @@
      justify-content: space-between;
    }
    
-   
    .hamburger { display: none; }
    
    .hamburger .bar {
@@ -255,7 +254,6 @@
      font-size: 30px;
      transform: rotate(-316deg);
    }
-   
    
    .logo-form {
      display: flex;
@@ -313,7 +311,7 @@
    }
    
    .nav-link:hover { color: #000; }
-   
+
    /*=================================
            Header styling ends here
          =================================*/
@@ -327,7 +325,6 @@
      position: relative;
      background: url(https://fibreguard.com/uploads/_1200x630_crop_center-center_82_none/healthcare-waiting-room-interior-design.jpg?mtime=1595594386) no-repeat top center;
      background-size: cover;
-   
    }
    
    .banner::before {
@@ -434,9 +431,11 @@
      outline: none;
    }
    
-   .input.input-succes { border: 1px solid #367db5; }
+   .input-group.succes input { border: 1px solid #367db5; }
    
-   .input.input-error { border: 1px solid #F62100; }
+   .input-group.error input { border: 1px solid #F62100; }
+
+   .input-span.fail{ visibility: visible ; }
    
    .input-span{ 
     color: #e51717;
@@ -831,6 +830,8 @@
      .bottom-item { padding: 0 5px; }
    
      .bottom-links { font-size: 10px; }
+
+     html.html{ overflow-y: hidden; }
    }
    /*media query for 481px-768px starts here*/
    @media only screen and (min-width: 481px) and (max-width:768px) {
@@ -920,6 +921,8 @@
        justify-content: center;
      }
    
+     .list-item{ border: none ; }
+
      .footer-bottom{ padding: 0; }
    
      .bottom-nav { margin-bottom: 10px; }
@@ -927,10 +930,8 @@
      .bottom-item { padding: 0 5px; }
    
      .bottom-links { font-size: 10px; }
-   }
-   
-   html.html{
-     overflow-y: hidden;
+
+     html.html{ overflow-y: hidden; }
    }
    /*media query for 481px-768px starts here*/
    /*media query for 320px-481px starts here*/
@@ -1038,5 +1039,9 @@
      .bottom-item { padding: 0 5px; }
    
      .bottom-links { font-size: 8px; }
+
+     .list-item{ border: none ; }
+
+    html.html{ overflow-y: hidden; }
    }
    /*media query for 481px-768px starts here*/
