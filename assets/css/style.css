@@ -1270,7 +1270,6 @@
      align-items: center;
      justify-content: space-between;
    }
-   
    .hamburger { display: none; }
    
    .hamburger .bar {
@@ -1879,6 +1878,8 @@
      .bottom-links { font-size: 10px; }
 
      html.html{ overflow-y: hidden; }
+
+     html.html{ overflow-y: hidden; }
    }
    /*media query for 481px-768px starts here*/
    @media only screen and (min-width: 481px) and (max-width:768px) {
@@ -1968,6 +1969,8 @@
        justify-content: center;
      }
    
+     .list-item{ border: none ; }
+
      .list-item{ border: none ; }
 
      .footer-bottom{ padding: 0; }
@@ -2086,6 +2089,10 @@
      .bottom-item { padding: 0 5px; }
    
      .bottom-links { font-size: 8px; }
+
+     .list-item{ border: none ; }
+
+    html.html{ overflow-y: hidden; }
 
      .list-item{ border: none ; }
 
