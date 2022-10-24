@@ -34,8 +34,8 @@ form.addEventListener("submit", function (e) {
         lastName.value = "";
         position.value = "";
         company.value = "";
-        choose.value = "";
-        country.value = "";
+        choose.value = "select";
+        country.value = "select";
         yes.checked = false;
         no.checked = false;
     } else {
@@ -58,7 +58,7 @@ function validation(input, regex) {
     if (str == "") {
         spanError.classList.add("fail");
         inputGroup.classList.add("error");
-        spanError.innerText = "*please enter a valid " + input.name;
+        spanError.innerText = "*please enter your " + input.name;
     }else if (!regex.test(str)) {
         spanError.classList.add("fail");
         inputGroup.classList.add("error");
