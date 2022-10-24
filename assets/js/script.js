@@ -13,6 +13,7 @@ const form = document.querySelector(".form")
     scrollTop = document.querySelector(".scrollTop-btn"),
     yes = document.querySelector(".yes"),
     no = document.querySelector(".no"),
+    check = document.querySelectorAll(".check")
     nameRegex = /^([a-zA-Z])/,
     emailRegex = /^[A-Za-z0-9._]{3,}@[A-Za-z]{3,}[.]{1}[A-Za-z.]{2,6}$/;
 // global variable declaration start here
@@ -27,7 +28,7 @@ hamburger.addEventListener("click", function () {
 form.addEventListener("submit", function (e) {
     e.preventDefault();
     error = document.querySelectorAll(".fail");
-    if ((firstName.value) && (lastName.value) && (position.value) && (company.value) && (choose.value) && (country.value) && (email.value) && (yes.checked || no.checked) && (error.length === 0)) {
+    if ((firstName.value) && (lastName.value) && (position.value) && (company.value) && (choose.value) && (country.value) && (email.value) && (yes.checked===true || no.checked===true) && (error.length === 0)) {
         alert("Your form has been submitted successfully..!");
         firstName.value = "";
         lastName.value = "";
@@ -86,13 +87,11 @@ function pick(optionInput) {
 };
 function checkBox() {
     spanError = document.querySelector(".yes-input");
-    if ((yes.checked != true) && (no.checked != true)) {
+    if ((yes.checked === true) || (no.checked === true)) {
+        spanError.classList.remove("fail");
+    } else {
         spanError.classList.add("fail");
         spanError.innerText = "*please select our T&C "
-    } else {
-        spanError.classList.remove("fail");
-        spanError.innerText = "";
-        console.log("HI CHECKBOX");
     }
 };
 // validation function end here
@@ -124,7 +123,14 @@ choose.addEventListener("blur", function () {
 country.addEventListener("blur", function () {
     pick(country);
 });
-// input blur event start here
+
+check.forEach(function(ele){
+    ele.addEventListener("blur",function(){
+        checkBox();
+    })
+    
+});
+// input blur event end here
 // scroll to the top start here
 scrollTop.addEventListener("click", () => {
     window.scrollTo({
