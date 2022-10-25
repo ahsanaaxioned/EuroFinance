@@ -36,6 +36,7 @@ form.addEventListener("submit", function (e) {
         company.value = "";
         choose.value = "select";
         country.value = "select";
+        email.value = "";
         yes.checked = false;
         no.checked = false;
     } else {
@@ -87,7 +88,7 @@ function pick(optionInput) {
 
 yes.addEventListener('click', function () {
     if (yes.checked === true) {
-        no.checked === false;
+        no.checked = false;
     }
 })
 no.addEventListener('click', function () {
