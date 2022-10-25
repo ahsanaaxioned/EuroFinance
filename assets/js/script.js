@@ -1,5 +1,5 @@
 // global variable declaration start here
-const form = document.querySelector(".form")
+const form = document.querySelector(".form"),
     hamburger = document.querySelector(".hamburger"),
     navbar = document.querySelector(".navbar"),
     html = document.querySelector('html'),
@@ -13,8 +13,8 @@ const form = document.querySelector(".form")
     scrollTop = document.querySelector(".scrollTop-btn"),
     yes = document.querySelector(".yes"),
     no = document.querySelector(".no"),
-    check = document.querySelectorAll(".check")
-    nameRegex = /^([a-zA-Z])/,
+    check = document.querySelectorAll(".check"),
+    nameRegex = /^[a-zA-Z]+$/g,
     emailRegex = /^[A-Za-z0-9._]{3,}@[A-Za-z]{3,}[.]{1}[A-Za-z.]{2,6}$/;
 // global variable declaration start here
 // hambuger function  start here
@@ -28,7 +28,7 @@ hamburger.addEventListener("click", function () {
 form.addEventListener("submit", function (e) {
     e.preventDefault();
     error = document.querySelectorAll(".fail");
-    if ((firstName.value) && (lastName.value) && (position.value) && (company.value) && (choose.value) && (country.value) && (email.value) && (yes.checked===true || no.checked===true) && (error.length === 0)) {
+    if ((firstName.value) && (lastName.value) && (position.value) && (company.value) && (choose.value) && (country.value) && (email.value) && (yes.checked === true || no.checked === true) && (error.length === 0)) {
         alert("Your form has been submitted successfully..!");
         firstName.value = "";
         lastName.value = "";
@@ -59,19 +59,18 @@ function validation(input, regex) {
         spanError.classList.add("fail");
         inputGroup.classList.add("error");
         spanError.innerText = "*please enter your " + input.name;
-    }else if (!regex.test(str)) {
+    } else if (!regex.test(str)) {
         spanError.classList.add("fail");
         inputGroup.classList.add("error");
         spanError.innerText = "*please eneter a valid " + input.name;
-    }else if (str.length < 4) {
+    } else if (str.length < 4) {
         spanError.classList.add("fail");
         inputGroup.classList.add("error");
         spanError.innerText = "*it must be atleast 4 character";
-    }else {
+    } else {
         spanError.classList.remove("fail");
         inputGroup.classList.add("succes");
         inputGroup.classList.remove("error");
-        pick(choose);
     }
 };
 
@@ -80,18 +79,30 @@ function pick(optionInput) {
         spanError = opt.querySelector(".input-span");
     if (optionInput.value == "select") {
         spanError.classList.add("fail");
-        spanError.innerText = "*please select a valid option";
+        spanError.innerText = "*please select a valid " + optionInput.name;
     } else {
         spanError.classList.remove("fail");
     }
 };
+
+yes.addEventListener('click', function () {
+    if (yes.checked === true) {
+        no.checked === false;
+    }
+})
+no.addEventListener('click', function () {
+    if (no.checked === true) {
+        yes.checked = false;
+    }
+});
+
 function checkBox() {
     spanError = document.querySelector(".yes-input");
     if ((yes.checked === true) || (no.checked === true)) {
         spanError.classList.remove("fail");
     } else {
         spanError.classList.add("fail");
-        spanError.innerText = "*please select our T&C "
+        spanError.innerText = "*please select any one ";
     }
 };
 // validation function end here
@@ -124,11 +135,10 @@ country.addEventListener("blur", function () {
     pick(country);
 });
 
-check.forEach(function(ele){
-    ele.addEventListener("blur",function(){
+check.forEach(function (ele) {
+    ele.addEventListener("blur", function () {
         checkBox();
     })
-    
 });
 // input blur event end here
 // scroll to the top start here
