@@ -14,7 +14,7 @@ const form = document.querySelector(".form"),
     yes = document.querySelector(".yes"),
     no = document.querySelector(".no"),
     check = document.querySelectorAll(".check"),
-    nameRegex = /^[a-zA-Z]+$/g,
+    nameRegex = /^[A-Za-z]+$/,
     emailRegex = /^[A-Za-z0-9._]{3,}@[A-Za-z]{3,}[.]{1}[A-Za-z.]{2,6}$/;
 // global variable declaration start here
 // hambuger function  start here
