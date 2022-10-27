@@ -1833,7 +1833,7 @@
        height: 100%;
        flex-direction: column;
        align-items: center;
-       gap: 50px;
+       gap: 20px;
        justify-content: center;
        transition: all .3s;
      }
@@ -1930,7 +1930,7 @@
        height: 100%;
        align-items: center;
        flex-direction: column;
-       gap: 50px;
+       gap: 20px;
        justify-content: center;
        transition: all .3s;
      }
@@ -2038,7 +2038,7 @@
        height: 100%;
        align-items: center;
        flex-direction: column;
-       gap: 50px;
+       gap: 20px;
        justify-content: center;
        transition: all .3s;
      }
