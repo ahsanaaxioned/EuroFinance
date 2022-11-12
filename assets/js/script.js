@@ -16,6 +16,7 @@ const form = document.querySelector(".form"),
     check = document.querySelectorAll(".check"),
     nameRegex = /^[A-Za-z]+$/,
     emailRegex = /^[A-Za-z0-9._]{3,}@[A-Za-z]{3,}[.]{1}[A-Za-z.]{2,6}$/;
+let isvalid = false;
 // global variable declaration start here
 // hambuger function  start here
 hamburger.addEventListener("click", function () {
@@ -28,26 +29,17 @@ hamburger.addEventListener("click", function () {
 form.addEventListener("submit", function (e) {
     e.preventDefault();
     error = document.querySelectorAll(".fail");
-    if ((firstName.value) && (lastName.value) && (position.value) && (company.value) && (choose.value) && (country.value) && (email.value) && (yes.checked === true || no.checked === true) && (error.length === 0)) {
+    validation(firstName, nameRegex);
+    validation(lastName, nameRegex);
+    validation(position, nameRegex);
+    validation(company, nameRegex);
+    pick(choose);
+    pick(country);
+    validation(email, emailRegex);
+    checkBox();
+    if (isvalid === true && error.length === 0) {
         alert("Your form has been submitted successfully..!");
-        firstName.value = "";
-        lastName.value = "";
-        position.value = "";
-        company.value = "";
-        choose.value = "select";
-        country.value = "select";
-        email.value = "";
-        yes.checked = false;
-        no.checked = false;
-    } else {
-        validation(firstName, nameRegex);
-        validation(lastName, nameRegex);
-        validation(position, nameRegex);
-        validation(company, nameRegex);
-        pick(choose);
-        pick(country);
-        validation(email, emailRegex);
-        checkBox();
+        form.reset();
     }
 });
 // form submit event end here
@@ -60,18 +52,22 @@ function validation(input, regex) {
         spanError.classList.add("fail");
         inputGroup.classList.add("error");
         spanError.innerText = "*please enter your " + input.name;
+        return isvalid = false;
     } else if (!regex.test(str)) {
         spanError.classList.add("fail");
         inputGroup.classList.add("error");
         spanError.innerText = "*please eneter a valid " + input.name;
+        return isvalid = false;
     } else if (str.length < 4) {
         spanError.classList.add("fail");
         inputGroup.classList.add("error");
         spanError.innerText = "*it must be atleast 4 character";
+        return isvalid = false;
     } else {
         spanError.classList.remove("fail");
         inputGroup.classList.add("succes");
         inputGroup.classList.remove("error");
+        return isvalid = true
     }
 };
 
@@ -81,8 +77,10 @@ function pick(optionInput) {
     if (optionInput.value == "select") {
         spanError.classList.add("fail");
         spanError.innerText = "*please select a valid " + optionInput.name;
+        return isvalid = false;
     } else {
         spanError.classList.remove("fail");
+        return isvalid = true;
     }
 };
 
@@ -104,6 +102,7 @@ function checkBox() {
     } else {
         spanError.classList.add("fail");
         spanError.innerText = "*please select any one ";
+        return isvalid = false
     }
 };
 // validation function end here
