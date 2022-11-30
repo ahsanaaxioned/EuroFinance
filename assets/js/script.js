@@ -16,7 +16,7 @@ const form = document.querySelector(".form"),
     check = document.querySelectorAll(".check"),
     nameRegex = /^[A-Za-z]+$/,
     emailRegex = /^[A-Za-z0-9._]{3,}@[A-Za-z]{3,}[.]{1}[A-Za-z.]{2,6}$/;
-let isvalid = false;
+let isvalid ;
 // global variable declaration start here
 // hambuger function  start here
 hamburger.addEventListener("click", function () {
@@ -48,6 +48,7 @@ function validation(input, regex) {
     const inputGroup = input.parentElement,
         spanError = inputGroup.querySelector(".input-span"),
         str = input.value;
+        isvalid = true
     if (str == "") {
         spanError.classList.add("fail");
         inputGroup.classList.add("error");
@@ -67,7 +68,7 @@ function validation(input, regex) {
         spanError.classList.remove("fail");
         inputGroup.classList.add("succes");
         inputGroup.classList.remove("error");
-        return isvalid = true
+        return isvalid 
     }
 };
 
